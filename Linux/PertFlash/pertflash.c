@@ -5,6 +5,7 @@
 #include "serial.h"
 
 #define SERIAL_CLICK -1.0
+#define SERIAL_GC_WRITE_ERROR -2.0
 #define SERIAL_READ_ERROR -69.0
 #define AVG_UPPER_LIMIT 1000.0
 #define AVG_LOWER_LIMIT 1.0
@@ -73,6 +74,10 @@ void *serialThread(){
         }
         else if(f == SERIAL_READ_ERROR){
             printf("Error reading serial port\n");
+            mainRunning = 0;
+        }
+        else if(f == SERIAL_GC_WRITE_ERROR){
+            printf("Error sending controller status\n");
             mainRunning = 0;
         }
     }
