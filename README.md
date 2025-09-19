@@ -6,7 +6,7 @@ Works on Windows, Linux and Android.
 # Build
 **Windows:** Visual Studio solution provided  
 **Android:** Android Studio project provided  
-**Linux:** Simple build script provided
+**Linux:** Makefile provided
 
 # Acknowledgements
 [ABasharEter](https://github.com/ABasharEter) for his [CSerialPort](https://github.com/ABasharEter/CSerialPort)  
